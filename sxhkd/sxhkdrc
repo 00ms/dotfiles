@@ -1,0 +1,22 @@
+super + e
+        maim --select | tee ~/pix/ss/$(date +%s).jpg | xclip -selection clipboard -t image/png
+
+XF86MonBrightnessDown 
+                    xbacklight - 5
+
+XF86MonBrightnessUp
+                  xbacklight + 5
+
+XF86AudioRaiseVolume
+                  pactl set-sink-volume @DEFAULT_SINK@ +2000
+
+XF86AudioLowerVolume
+                   pactl set-sink-volume @DEFAULT_SINK@ -2000
+
+XF86AudioMute
+            pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+
+
+super + i	
+	dmenu_run
